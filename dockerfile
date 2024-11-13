@@ -10,4 +10,5 @@ COPY ./package.json ./yarn.lock /app/
 RUN yarn install
 
 # Start application
+CMD ["yarn", "build"]
 CMD ["yarn", "start"]

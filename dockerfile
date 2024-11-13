@@ -4,8 +4,6 @@ FROM node:22.10.0-slim
 # 设置工作目录
 WORKDIR /app
 
-RUN apk add --no-cache yarn
-
 # 安装依赖
 RUN yarn install
 

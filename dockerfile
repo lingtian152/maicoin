@@ -1,12 +1,14 @@
-# 第一阶段：Node.js 构建阶段
+# First stage: Node.js build stage
 FROM node:22.10.0-slim
 
-# 设置工作目录
+# Set working directory
 WORKDIR /app
 
-# 安装依赖
-RUN yarn install
+# Copy package.json and yarn.lock to the container
+COPY ./package.json ./yarn.lock /app/
 
+# Install dependencies
+RUN apt update && apt install -y yarn && yarn install
 
-# 启动应用
+# Start application
 CMD ["yarn", "start"]

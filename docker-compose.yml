@@ -1,6 +1,6 @@
 services:
   mairen_coin:
-    image: mairen_coin:latest
+    image: lingtianps/mairen_coin:latest
     container_name: mairen_coin
     volumes:
       - .:/app

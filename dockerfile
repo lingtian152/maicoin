@@ -8,7 +8,7 @@ WORKDIR /app
 COPY ./package.json ./yarn.lock /app/
 
 # Install dependencies
-RUN apt update && apt install -y yarn && yarn install
+RUN apt install -y yarn && yarn install
 
 # Start application
 CMD ["yarn", "start"]

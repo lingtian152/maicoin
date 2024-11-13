@@ -7,8 +7,5 @@ WORKDIR /app
 # Copy package.json and yarn.lock to the container
 COPY ./package.json ./yarn.lock /app/
 
-# Install dependencies
-RUN apt install -y yarn && yarn install
-
 # Start application
 CMD ["yarn", "start"]

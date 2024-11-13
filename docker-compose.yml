@@ -1,0 +1,10 @@
+services:
+  mairen_coin:
+    image: mairen_coin:latest
+    container_name: mairen_coin
+    volumes:
+      - .:/app
+    restart: always
+    ports:
+      - "127.0.0.1:7008:3000"
+  command: yarn start

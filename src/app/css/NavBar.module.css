@@ -1,0 +1,28 @@
+.title {
+  margin-right: auto;
+  font-size: 24px;
+}
+
+.v_btn,
+.title {
+  font-weight: 600;
+  font: bold;
+}
+
+.v_btn {
+  color: white;
+}
+
+.v_tab {
+  text-align: center;
+}
+
+.register {
+  margin-right: 15px !important;
+}
+
+.tab_buttons {
+  margin: 0 auto; /* Center the tabs */
+  text-decoration: none;
+  text-decoration-line: none;
+}

@@ -7,4 +7,4 @@ services:
     restart: always
     ports:
       - "127.0.0.1:7008:3000"
-  command: yarn start
+    command: yarn start

@@ -1,0 +1,28 @@
+.content_container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content_container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1976d2;
+}
+
+.content_container .content_descript {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.content_container .content_image {
+  width: 100%;
+  height: 300px;
+  background: url('/images/maicoin_bg.png') no-repeat center center/cover;
+  border-radius: 8px;
+  margin-top: 20px;
+}

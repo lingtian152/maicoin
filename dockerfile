@@ -1,21 +1,19 @@
-# Use an official Node.js image
-FROM node:20-alpine
+# 使用官方的 Node.js 镜像作为基础镜像
+FROM node:node:18.20-bookworm-slim
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+# 设置工作目录
+WORKDIR /app
 
-# Copy the package.json and package-lock.json files first (if they exist)
+# 复制 package.json 和 package-lock.json
 COPY package*.json ./
 
+# 安装项目依赖
 RUN npm install
 
-# Copy the rest of the application files
-COPY ./ ./
-
-# Expose the application port
-EXPOSE 7008
-
-# 默认命令: 同时运行 services 和 dev
-CMD ["npm", "run", "serivces", "&&", "npm", "run", "dev"]
 
 
+# 构建项目
+RUN npm run build
+
+# 启动应用
+CMD ["npm", "start"]

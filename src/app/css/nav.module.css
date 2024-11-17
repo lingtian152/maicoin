@@ -1,0 +1,97 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(25, 118, 210);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .nav_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar .nav_title {
+  font-size: 24px;
+  color: white;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.nav_container .tab_buttons {
+  margin: 0 auto;
+}
+
+.nav_container .nav_list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.nav_container .nav_list .nav_item {
+  margin-left: 20px;
+}
+
+.nav_container .nav_list .nav_item a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.nav_container .nav_list .nav_item a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.nav_container .auth_buttons {
+  margin-right: 35px;
+  display: flex;
+}
+
+.nav_container .auth_buttons .nav_item .login {
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav_container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_container .tab_buttons {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .nav_container .auth_buttons {
+    margin-top: 10px;
+  }
+
+  .nav_container .nav_list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav_container .nav_list .nav_item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav_container .nav_list .nav_item a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

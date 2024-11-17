@@ -1,0 +1,54 @@
+.investor_container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.investor_container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1976d2;
+  text-align: center;
+}
+
+.investor_content {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  position: relative;
+}
+
+.investor {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+.investor_img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.investor_img:hover {
+  transform: scale(1.1);
+}
+
+.investor_name {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .investor {
+    width: 150px;
+  }
+}

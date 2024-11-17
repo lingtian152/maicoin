@@ -1,20 +1,13 @@
-version: '3.9'
+version: '3.8'
 
 services:
   mairen_coin:
+    container_name: mairen_coin
     build:
       context: .
       dockerfile: Dockerfile
-    networks:
-      - mairen_network
-    restart: always
     ports:
-      - "7008:7008"
-    environment:
-      NODE_ENV: development
+      - "127.0.0.1:7008:3000"
     volumes:
-      - .:/usr/src/app  # Mount the entire application directory
-    command: npm run dev
-
-networks:
-  mairen_network:
+      - .:/app
+    command: npm start

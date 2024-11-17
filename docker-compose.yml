@@ -1,8 +1,20 @@
+version: '3.9'
+
 services:
   mairen_coin:
-    image: lingtianps/mairen_coin:latest
-    container_name: mairen_coin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - mairen_network
     restart: always
     ports:
-      - "127.0.0.1:7008:3000"
-    command: yarn start
+      - "7008:7008"
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/usr/src/app  # Mount the entire application directory
+    command: npm run dev
+
+networks:
+  mairen_network:

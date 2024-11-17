@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # Install dependencies and build the app
-RUN yarn install --frozen-lockfile && yarn build && yarn cache clean
+RUN yarn install && yarn build && yarn cache clean
 
 # Stage 2: Production Stage
 FROM node:22.10.0-slim

@@ -7,8 +7,7 @@ WORKDIR /usr/src/app
 # Copy the package.json and package-lock.json files first (if they exist)
 COPY package*.json ./
 
-# Copy the node_modules directory from the host (if it exists)
-COPY node_modules ./node_modules
+RUN npm install
 
 # Copy the rest of the application files
 COPY ./ ./
